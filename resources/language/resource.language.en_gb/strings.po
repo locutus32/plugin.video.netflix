@@ -951,3 +951,7 @@ msgstr ""
 msgctxt "#30231"
 msgid "Do you want to check update now?"
 msgstr ""
+
+msgctxt "#30299"
+msgid "Enable AV1 profiles"
+msgstr ""
