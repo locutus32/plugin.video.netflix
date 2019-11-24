@@ -975,3 +975,11 @@ msgstr "Adultes [16+, 18+]"
 msgctxt "#30237"
 msgid "Content for {} will require the PIN to start playback."
 msgstr "Le contenu pour {} nécessite le code PIN pour être visionné."
+
+msgctxt "#30238"
+msgid ""
+msgstr ""
+
+msgctxt "#30239"  # This is a temporary transition option
+msgid "Keep watched status marks separate for each profile (this option will be removed in future versions)"
+msgstr "Garder le statut vu séparé pour chaque profil (cette option sera supprimée dans les prochaines versions)"
