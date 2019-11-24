@@ -5,7 +5,6 @@ from __future__ import absolute_import, division, unicode_literals
 import xbmc
 import xbmcplugin
 import xbmcgui
-import inputstreamhelper
 
 from resources.lib.globals import g
 import resources.lib.common as common
@@ -48,8 +47,11 @@ def play(videoid):
     metadata = api.metadata(videoid)
     common.debug('Metadata is {}', metadata)
 
-    if not _verify_pin(metadata[0].get('requiresPin', False)):
-        ui.show_notification(common.get_local_string(30106))
+    # Parental control PIN
+    pin_result = _verify_pin(metadata[0].get('requiresPin', False))
+    if not pin_result:
+        if pin_result is not None:
+            ui.show_notification(common.get_local_string(30106), time=10000)
         xbmcplugin.endOfDirectory(g.PLUGIN_HANDLE, succeeded=False)
         return
 
@@ -96,6 +98,7 @@ def get_inputstream_listitem(videoid):
     list_item.setContentLookup(False)
     list_item.setMimeType('application/dash+xml')
 
+    import inputstreamhelper
     is_helper = inputstreamhelper.Helper('mpd', drm='widevine')
 
     if not is_helper.check_inputstream():
@@ -124,10 +127,10 @@ def get_inputstream_listitem(videoid):
 
 
 def _verify_pin(pin_required):
-    if (not pin_required or g.ADDON.getSetting('adultpin_enable').lower() == 'false'):
+    if not pin_required:
         return True
     pin = ui.ask_for_pin()
-    return pin is not None and api.verify_pin(pin)
+    return None if not pin else api.verify_pin(pin)
 
 
 @common.time_execution(immediate=False)
@@ -155,9 +158,10 @@ def get_upnext_info(videoid, current_episode, metadata):
             next_episode_id.tvshowid,
             next_episode_id.seasonid,
             next_episode_id.episodeid)
-        next_info['play_info'] = {'play_path': xbmc.translatePath(filepath).decode('utf-8')}
+        next_info['play_info'] = {'play_path': g.py2_decode(xbmc.translatePath(filepath))}
     else:
-        next_info['play_info'] = {'play_path': common.build_url(videoid=next_episode_id, mode=g.MODE_PLAY)}
+        next_info['play_info'] = {'play_path': common.build_url(videoid=next_episode_id,
+                                                                mode=g.MODE_PLAY)}
     if 'creditsOffset' in metadata[0]:
         next_info['notification_time'] = (metadata[0]['runtime'] -
                                           metadata[0]['creditsOffset'])

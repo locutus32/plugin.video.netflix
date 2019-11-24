@@ -3,7 +3,7 @@
   <category label="30031"><!--General-->
     <setting label="30014" type="lsep"/><!--Account-->
     <setting id="logout" type="action" label="30017" action="RunPlugin(plugin://plugin.video.netflix/action/logout/)" option="close"/>
-    <setting id="adultpin_enable" type="action" label="30062" default="False" action="RunPlugin(plugin://plugin.video.netflix/action/toggle_adult_pin/)" option="close"/>
+    <setting id="parental_control" type="action" label="30062" action="RunPlugin(plugin://plugin.video.netflix/action/parental_control/)" option="close"/>
     <setting label="30053" type="lsep"/><!--Auto login-->
     <setting id="info" type="text" label="30057" default="" enable="false"/>
     <setting id="autologin_enable" type="bool" label="30054" default="false" enable="eq(0,true)"/>
@@ -128,7 +128,7 @@
     <setting id="esn" type="text" label="30034" value="" default=""/>
     <setting id="reset_esn" type="action" label="30217" action="RunPlugin(plugin://plugin.video.netflix/action/reset_esn/)" option="close"/>
     <setting label="30116" type="lsep"/><!--Advanced Addon Configuration-->
-    <setting id="debug_log_level" type="labelenum" label="30066" values="Disabled|Info|Verbose" default="0"/>
+    <setting id="debug_log_level" type="labelenum" label="30066" values="Disabled|Info|Verbose" default="Disabled"/>
     <setting id="run_init_configuration" type="bool" label="30158" default="true"/>
     <setting id="enable_ipc_over_http" type="bool" label="30139" default="false"/>
     <setting id="enable_timing" type="bool" label="30134" default="false"/>
