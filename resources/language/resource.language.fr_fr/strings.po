@@ -90,7 +90,7 @@ msgstr "Options supplémentaires"
 
 msgctxt "#30016"
 msgid "ESN"
-msgstr "ESN"
+msgstr "code ESN"
 
 msgctxt "#30017"
 msgid "Logout"
