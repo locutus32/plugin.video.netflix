@@ -318,7 +318,7 @@ msgstr "Démarrer uniquement après 5 minutes d'inactivité"
 
 msgctxt "#30073"
 msgid "Always show codec information during video playback"
-msgstr ""
+msgstr "Toujours afficher les informations concernant les codec durant la lecture"
 
 msgctxt "#30074"
 msgid "View for exported"
@@ -350,7 +350,7 @@ msgstr "Mettre en pause après avoir passé"
 
 msgctxt "#30081"
 msgid "Force HDCP 2.2 video streams"
-msgstr "Forcer l'utilisation du HDCP 2.2 (permet l'accès au contenu 4K)"
+msgstr "Forcer l'utilisation du HDCP 2.2"
 
 msgctxt "#30082"
 msgid "Remember audio / subtitle preferences"
@@ -654,11 +654,11 @@ msgstr ""
 
 msgctxt "#30157"
 msgid "The configuration has been completed"
-msgstr ""
+msgstr "Configuration terminée"
 
 msgctxt "#30158"
 msgid "Run add-on configuration wizard"
-msgstr ""
+msgstr "Utiliser l'assistant de configuration de l'addon"
 
 msgctxt "#30159"
 msgid "View for main menu"
