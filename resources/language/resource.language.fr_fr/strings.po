@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plugin.video.netflix\n"
 "Report-Msgid-Bugs-To: https://github.com/CastagnaIT/plugin.video.netflix\n"
 "POT-Creation-Date: 2017-11-23 16:15+0000\n"
-"PO-Revision-Date: 2020-02-29 17:45+0000\n"
+"PO-Revision-Date: 2020-04-10 17:45+0000\n"
 "Last-Translator: locutus32\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -184,7 +184,7 @@ msgstr "Voir les séries"
 
 msgctxt "#30042"
 msgid "View for seasons"
-msgstr "Vue pour les saisons"
+msgstr "Voir les saisons"
 
 msgctxt "#30043"
 msgid "View for episodes"
@@ -336,7 +336,9 @@ msgctxt "#30085"
 msgid "Cache item time-to-live for metadata (days)"
 msgstr "Durée de vie du cache des métadonnées (jours)"
 
-# Unused 30086
+msgctxt "#30086"
+msgid "Cache item time-to-live for my list (minutes)"
+msgstr "Durée de vie du cache de Ma Liste (minutes)"
 
 msgctxt "#30087"
 msgid "Contains {} and more..."
@@ -941,3 +943,8 @@ msgstr "Marqué comme vu|Marquer comme non-vu|Restaurer le status de Netflix"
 msgctxt "#30238"
 msgid "Up Next notifications (watch next video)"
 msgstr "Notifications Up Next (regarder la vidéo suivante)"
+
+msgctxt "#30239"
+msgid "Color of supplemental plot info"
+msgstr "Couleur des infos complémentaires"
+
